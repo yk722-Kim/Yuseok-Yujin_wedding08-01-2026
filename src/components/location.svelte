@@ -14,34 +14,15 @@
       .then(() => alert($_('location.address_copied')))
       .catch(() => null);
   }
-
-  function copyAccount(accountNumber: string) {
-    navigator.clipboard
-      .writeText(accountNumber)
-      .then(() => alert('계좌번호가 복사되었습니다.'))
-      .catch(() => null);
-  }
-
-  let groomOpen = false;
-  let brideOpen = false;
-
-  const groomAccounts = [
-    { name: '김유석', bank: '하나은행', account: '880-910543-82207' },
-    { name: '[부]김경윤', bank: '제일은행', account: '597-20-013988' },
-    { name: '[모]김수현', bank: '농협은행', account: '312-91835-87401' }
-  ];
-
-  const brideAccounts = [
-    { name: '김유진', bank: '토스뱅크', account: '1000-1171-1442' },
-    { name: '[부]김찬훈', bank: '우리은행', account: '060-029887-12-101' },
-    { name: '[모]안현아', bank: '하나은행', account: '359-18-10978-0' }
-  ];
 </script>
 
 <img src={locationTopWave} class="location-top-wave" alt="" />
+
 <section class="location">
   <h2 class="title {localeStore.locale}">{$_('location.title')}</h2>
+
   <p class="venue en">A.D. White House, Cornell University</p>
+
   <button class="copy-address en" onclick={copyAddress}>
     <span class="clipboard-icon">
       <Clipboard size="1.1em" />
@@ -60,76 +41,17 @@
     />
   </div>
 
-  <div class="account-section">
-    <h2 class="title kr">마음전하실 곳</h2>
-
-    <div class="account-group">
-      <button class="account-toggle kr" onclick={() => (groomOpen = !groomOpen)}>
-        <span>신랑측 계좌번호</span>
-        <span class="toggle-mark">{groomOpen ? '−' : '+'}</span>
-      </button>
-
-      {#if groomOpen}
-        <div class="account-list">
-          {#each groomAccounts as item, index}
-            <div class="account-item">
-              <p class="account-name kr">{item.name}</p>
-              <div class="account-line">
-                <span class="account-text kr">{item.bank} {item.account}</span>
-                <button
-                  class="copy-account-button kr"
-                  type="button"
-                  onclick={() => copyAccount(item.account)}
-                >
-                  복사하기
-                </button>
-              </div>
-            </div>
-
-            {#if index < groomAccounts.length - 1}
-              <div class="account-divider"></div>
-            {/if}
-          {/each}
-        </div>
-      {/if}
-    </div>
-
-    <div class="account-group">
-      <button class="account-toggle kr" onclick={() => (brideOpen = !brideOpen)}>
-        <span>신부측 계좌번호</span>
-        <span class="toggle-mark">{brideOpen ? '−' : '+'}</span>
-      </button>
-
-      {#if brideOpen}
-        <div class="account-list">
-          {#each brideAccounts as item, index}
-            <div class="account-item">
-              <p class="account-name kr">{item.name}</p>
-              <div class="account-line">
-                <span class="account-text kr">{item.bank} {item.account}</span>
-                <button
-                  class="copy-account-button kr"
-                  type="button"
-                  onclick={() => copyAccount(item.account)}
-                >
-                  복사하기
-                </button>
-              </div>
-            </div>
-
-            {#if index < brideAccounts.length - 1}
-              <div class="account-divider"></div>
-            {/if}
-          {/each}
-        </div>
-      {/if}
-    </div>
-  </div>
-
   <p class="signature en">made by Yuseok & Yujin</p>
-  <a class="github-icon" href="https://github.com/anthopark/our-wedding-invitation" target="_blank" rel="noopener noreferrer">
+
+  <a
+    class="github-icon"
+    href="https://github.com/yk722-Kim/Yuseok-Yujin_wedding08-01-2026"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <Github size="1.1em" strokeWidth={1} />
   </a>
+
   <img class="location-deco" src={locationDeco} alt="" />
 </section>
 
@@ -204,101 +126,6 @@
     border: none;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .account-section {
-    width: 100%;
-    margin-bottom: 4em;
-  }
-
-  .account-section h2.title {
-    margin-bottom: 1em;
-  }
-
-  .account-group {
-    width: 100%;
-    margin-bottom: 1em;
-  }
-
-  .account-toggle {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.95em 1em;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 8px;
-    background-color: $white;
-    color: $primary-color;
-    cursor: pointer;
-    text-align: left;
-    box-sizing: border-box;
-
-    &.kr {
-      font-size: 1.05rem;
-    }
-  }
-
-  .toggle-mark {
-    font-size: 1.3rem;
-    line-height: 1;
-  }
-
-  .account-list {
-    margin-top: 0.6em;
-    padding: 1em;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-
-  .account-item {
-    padding: 0.2em 0;
-  }
-
-  .account-name {
-    margin-bottom: 0.45em;
-    color: $font-color-default;
-    font-weight: 600;
-
-    &.kr {
-      font-size: 1rem;
-    }
-  }
-
-  .account-line {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.8em;
-  }
-
-  .account-text {
-    color: $font-color-default;
-    word-break: keep-all;
-
-    &.kr {
-      font-size: 0.98rem;
-      line-height: 1.5;
-    }
-  }
-
-  .copy-account-button {
-    flex-shrink: 0;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: $white;
-    color: $primary-color;
-    border-radius: 6px;
-    padding: 0.45em 0.8em;
-    cursor: pointer;
-
-    &.kr {
-      font-size: 0.9rem;
-    }
-  }
-
-  .account-divider {
-    margin: 0.9em 0;
-    border-top: 1px dashed rgba(0, 0, 0, 0.18);
   }
 
   p.signature {
