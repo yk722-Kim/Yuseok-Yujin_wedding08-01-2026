@@ -1,0 +1,47 @@
+{
+	"meta": {
+		"title": "김유석과 김유진의 결혼식에 초대합니다."
+	},
+	"cover": {
+		"date": "2026년 8월 1일 (토) 2시",
+		"place": "A.D White House, Cornell University"
+	},
+	"letter": {
+		"date": "2026.8.1",
+		"sub_title": "운명 같은 만남으로부터 평생의 사랑이 되는 날",
+		"letter_content": "서로의 얼굴을 마주보며 함께해 온 시간에 이어,\n 이제는 같은 방향을 바라보며 걸어갈 날들을 꿈꿉니다.\n저희는 인생의 새로운 여정을 함께 시작하려 합니다.\n기쁜 마음으로 이 소식을 전하며, 늘 함께해 주신 마음에 감사드립니다."
+	},
+	"rsvp": {
+		"title": "참석여부 회신",
+		"reply_by": "5월 16일까지 답변 부탁드립니다.",
+		"fullname_placeholder": "영문 성함 (예: Yujin Kim)",
+		"send": "보내기",
+		"missing_name_error": "성함을 입력해주세요.",
+		"missing_rsvp_error": "참석 여부를 선택해주세요.",
+		"email_error": "오류가 발생했습니다. 다시 시도해 주세요.",
+		"email_success": "참석여부를 보냈습니다. 감사합니다!",
+		"select": {
+			"select_attendance": "참석여부 선택",
+			"yes": "참석합니다.",
+			"no": "참석하지 못합니다."
+		},
+		"accordion": {
+			"dress_code": "드레스 코드",
+			"the_menu": "식사 메뉴",
+			"semi_formal": "세미 포멀",
+			"suit_and_tie": "‘결혼식 느낌’ 나게 예쁘게 오셔요! 정장과 칵테일 드레스 환영입니다.",
+			"menu_title": "듀엣 앙트레 코스",
+			"beef": "저온 조리한 갈비살 스테이크",
+			"fish": "된장 글레이즈를 입힌 하와이안 버터피쉬",
+			"vegetarian": "채식 메뉴도 준비되어 있으니, 원하시는 경우 미리 알려주세요."
+		}
+	},
+	"gallery": {
+		"title": "사진 모음",
+		"sub_title": "사진을 탭하면 더 크게 볼 수 있습니다."
+	},
+	"location": {
+		"title": "예식장",
+		"address_copied": "주소를 복사했습니다."
+	}
+}

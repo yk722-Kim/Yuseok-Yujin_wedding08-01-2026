@@ -1,0 +1,20 @@
+/* src/styles/_tokens.scss */
+
+/* Colors */
+$white: #ffffff;
+$font-color-default: #2b2b2b;
+$bg-color-1: #ffffff;
+
+/* Layout */
+$content-max-width: 720px;
+
+/* Breakpoints (예시 값) */
+$mobile-md: 375px;
+$mobile-lg: 430px;
+
+/* Mixin: for-range */
+@mixin for-range($min-width) {
+  @media (min-width: $min-width) {
+    @content;
+  }
+}
