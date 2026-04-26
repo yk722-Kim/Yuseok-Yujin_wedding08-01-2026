@@ -11,7 +11,7 @@ const config = {
       fallback: '404.html'
     }),
     paths: {
-      base: dev ? '' : '/yukim-wedding-invitation'
+      base: '/Yuseok-Yujin_wedding08-01-2026'
     },
     prerender: {
       entries: ['*']
